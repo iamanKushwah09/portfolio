@@ -20,12 +20,12 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="w-full md:w-1/2"
           >
-            <h2 className="text-4xl font-display font-bold mb-6">
+            <h2 className="text-5xl font-display font-black mb-8 tracking-tighter">
               About <span className="text-cyan-400">Me</span>
             </h2>
-            <p className="text-gray-400 mb-6 leading-relaxed text-lg">
-              I am a <span className="text-white font-bold">BCA Final Year Student</span> passionate about building the future of the web. 
-              My expertise spans from low-level systems programming in <span className="text-cyan-400">C/C++</span> to modern web development with <span className="text-purple-400">React & TypeScript</span>.
+            <p className="text-gray-400 mb-8 leading-loose text-lg font-light tracking-wide">
+              I am a <span className="text-white font-semibold">BCA Final Year Student</span> passionate about building the future of the web. 
+              My expertise spans from low-level systems programming in <span className="text-cyan-400 font-mono">C/C++</span> to modern web development with <span className="text-purple-400 font-mono">React & TypeScript</span>.
               I don't just write code; I engineer digital experiences that are fast, futuristic, and efficient.
             </p>
             <div className="grid grid-cols-2 gap-4">

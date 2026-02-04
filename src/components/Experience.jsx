@@ -20,7 +20,7 @@ const Experience = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-display font-bold mb-16 text-center"
+          className="text-6xl font-display font-black mb-20 text-center tracking-tighter"
         >
           WORK <span className="text-cyan-400">EXPERIENCE</span>
         </motion.h2>
@@ -49,10 +49,10 @@ const Experience = () => {
                     
                     <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
                        <div>
-                          <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">{exp.role}</h3>
-                          <p className="text-lg text-gray-300">{exp.company}</p>
+                          <h3 className="text-2xl font-display font-bold text-white group-hover:text-cyan-400 transition-colors">{exp.role}</h3>
+                          <p className="text-lg text-gray-300 font-light">{exp.company}</p>
                        </div>
-                       <div className="flex items-center gap-2 text-sm font-mono text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full border border-cyan-400/20 w-fit">
+                       <div className="flex items-center gap-2 text-xs font-mono font-bold text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full border border-cyan-400/20 w-fit">
                           <Calendar size={14} />
                           {exp.date}
                        </div>

@@ -12,8 +12,9 @@ export default {
         secondary: "#bd00ff",
       },
       fontFamily: {
-        display: ['Orbitron', 'sans-serif'],
+        display: ['Syne', 'sans-serif'],
         body: ['Outfit', 'sans-serif'],
+        mono: ['Space Grotesk', 'monospace'],
       },
     },
   },

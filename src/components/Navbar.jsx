@@ -19,9 +19,9 @@ const Navbar = () => {
           <li key={item}>
             <a 
               href={`#${item.toLowerCase()}`} 
-              className="text-gray-300 hover:text-white transition-colors duration-300 text-sm uppercase tracking-widest relative group"
+              className="text-gray-300 hover:text-white transition-colors duration-300 text-xs font-mono font-bold uppercase tracking-widest relative group"
             >
-              {item}
+              <span className="text-cyan-400 mr-1">//</span> {item}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-cyan-400 transition-all duration-300 group-hover:w-full" style={{ backgroundColor: 'var(--primary)' }}></span>
             </a>
           </li>

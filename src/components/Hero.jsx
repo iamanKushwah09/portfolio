@@ -20,7 +20,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-2xl md:text-3xl font-display font-bold mb-4 tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600"
+          className="text-2xl md:text-3xl font-mono font-bold mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600"
         >
           Hi, I'm Aman Kushwah
         </motion.h2>
@@ -29,7 +29,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-5xl md:text-8xl font-black font-display mb-6 tracking-tighter"
+          className="text-6xl md:text-9xl font-black font-display mb-8 tracking-tighter leading-none"
         >
           I BUILD <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600" style={{ backgroundImage: 'linear-gradient(to right, var(--primary), var(--secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
@@ -41,7 +41,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-gray-400 max-w-lg mx-auto mb-10 text-lg leading-relaxed"
+          className="text-gray-400 max-w-lg mx-auto mb-12 text-xl font-light leading-relaxed tracking-wide"
         >
           Full Stack Developer specializing in high-performance web applications and immersive user experiences.
         </motion.p>
@@ -52,10 +52,10 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="flex gap-6 justify-center"
         >
-          <button className="px-8 py-3 bg-cyan-500 text-black font-bold uppercase tracking-wider rounded transition-transform hover:scale-105 shadow-[0_0_20px_rgba(0,243,255,0.5)]" style={{ backgroundColor: 'var(--primary)' }}>
+          <button className="px-8 py-4 bg-cyan-500 text-black font-bold font-mono uppercase tracking-widest rounded-lg transition-transform hover:scale-105 shadow-[0_0_30px_rgba(0,243,255,0.3)] hover:shadow-[0_0_50px_rgba(0,243,255,0.5)]" style={{ backgroundColor: 'var(--primary)' }}>
             View Projects
           </button>
-          <button className="px-8 py-3 border border-white/20 hover:bg-white/5 transition-all uppercase tracking-wider rounded font-semibold">
+          <button className="px-8 py-4 border border-white/20 hover:bg-white/5 transition-all text-white font-mono uppercase tracking-widest rounded-lg font-semibold">
             Contact Me
           </button>
         </motion.div>

@@ -30,7 +30,7 @@ const Projects = () => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-display font-bold mb-16 text-center"
+          className="text-6xl font-display font-black mb-20 text-center tracking-tighter"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             FEATURED PROJECTS
@@ -52,12 +52,12 @@ const Projects = () => {
               <div className="relative h-full bg-black/90 backdrop-blur-xl p-8 rounded-xl border border-white/10 group-hover:border-transparent transition-colors overflow-hidden">
                 <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${project.color} opacity-10 blur-[50px] rounded-full group-hover:opacity-30 transition-opacity`}></div>
 
-                <h3 className="text-2xl font-bold mb-4 font-display">{project.title}</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">{project.description}</p>
+                <h3 className="text-3xl font-display font-bold mb-4">{project.title}</h3>
+                <p className="text-gray-400 mb-6 leading-relaxed font-light">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-8">
                   {project.tags.map((tag, i) => (
-                    <span key={i} className="px-3 py-1 text-xs font-semibold bg-white/5 border border-white/10 rounded-full text-gray-300">
+                    <span key={i} className="px-3 py-1 text-xs font-mono font-bold bg-white/5 border border-white/10 rounded-full text-cyan-200">
                       {tag}
                     </span>
                   ))}
