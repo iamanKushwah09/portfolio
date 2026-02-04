@@ -7,9 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: "#050505",
-        primary: "#00f3ff",
-        secondary: "#bd00ff",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
+        "text-primary": "var(--text-primary)",
+        "text-secondary": "var(--text-secondary)",
+        "bg-primary": "var(--bg-primary)",
+        "bg-secondary": "var(--bg-secondary)",
+        "bg-card": "var(--bg-card)",
+        "border-main": "var(--border-color)",
       },
       fontFamily: {
         display: ['Syne', 'sans-serif'],

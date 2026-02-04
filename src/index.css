@@ -5,17 +5,31 @@
 @tailwind utilities;
 
 :root {
-  --bg-dark: #050505;
-  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-primary: #050505;
+  --bg-secondary: #0a0a0a;
+  --bg-card: rgba(255, 255, 255, 0.04);
   --primary: #00f3ff;
   --secondary: #bd00ff;
   --accent: #ff0055;
   --text-primary: #ffffff;
-  --text-secondary: #a0a0a0;
+  --text-secondary: #b0b0b0;
+  --border-color: rgba(255, 255, 255, 0.12);
   
   --font-main: 'Outfit', sans-serif;
-  --font-display: 'Syne', sans-serif; /* Using Syne for headings for a unique art-direction feel */
+  --font-display: 'Syne', sans-serif;
   --font-mono: 'Space Grotesk', monospace;
+}
+
+.light-theme {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: rgba(15, 23, 42, 0.04);
+  --primary: #0ea5e9;
+  --secondary: #8b5cf6;
+  --accent: #f43f5e;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-color: rgba(15, 23, 42, 0.12);
 }
 
 * {
@@ -23,10 +37,11 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 body {
-  background-color: var(--bg-dark);
+  background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-main);
   overflow-x: hidden;
@@ -36,7 +51,7 @@ body {
 
 ::selection {
   background: var(--primary);
-  color: var(--bg-dark);
+  color: #000;
 }
 
 /* Custom Scrollbar */
@@ -44,10 +59,10 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-dark); 
+  background: var(--bg-primary); 
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--bg-dark), var(--secondary), var(--primary), var(--bg-dark)); 
+  background: linear-gradient(var(--bg-primary), var(--secondary), var(--primary), var(--bg-primary)); 
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -56,10 +71,10 @@ body {
 
 /* Utilities */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -73,12 +88,6 @@ body {
 .neon-border {
   border: 1px solid var(--primary);
   box-shadow: 0 0 10px rgba(0, 243, 255, 0.2), inset 0 0 5px rgba(0, 243, 255, 0.1);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 /* Animations */

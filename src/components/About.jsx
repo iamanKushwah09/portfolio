@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Cpu, Globe, Rocket, Terminal, Server, Database, Layers } from 'lucide-react';
+import { Code, Server, Database, Layers } from 'lucide-react';
 
 import profileImg from '../assets/aman.jpeg';
 
@@ -13,7 +13,7 @@ const About = () => {
     ];
 
   return (
-    <section id="about" className="py-20 relative bg-black/50">
+    <section id="about" className="py-20 relative">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-16">
           <motion.div 
@@ -22,20 +22,20 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="w-full md:w-1/2"
           >
-            <h2 className="text-4xl md:text-5xl font-display font-black mb-6 tracking-tighter">
-              About <span className="text-cyan-400">Me</span>
+            <h2 className="text-4xl md:text-5xl font-display font-black mb-6 tracking-tighter text-text-primary">
+              About <span className="text-primary">Me</span>
             </h2>
-            <p className="text-gray-400 mb-8 leading-loose text-lg font-light tracking-wide">
-              I am a <span className="text-white font-semibold">BCA Final Year Student</span> and an aspiring <span className="text-white font-semibold">MERN Stack Developer</span>. 
-              I specialize in building full-stack applications with <span className="text-cyan-400 font-mono">MongoDB, Express.js, React, and Node.js</span>. 
-              With a strong foundation in <span className="text-purple-400 font-mono">SQL (MySQL, PostgreSQL)</span> and <span className="text-cyan-400 font-mono">NoSQL</span> databases, I engineer scalable backends and dynamic user interfaces that deliver seamless digital experiences.
+            <p className="text-text-secondary mb-8 leading-loose text-lg font-light tracking-wide">
+              I am a <span className="text-text-primary font-semibold">BCA Final Year Student</span> and an aspiring <span className="text-text-primary font-semibold">MERN Stack Developer</span>. 
+              I specialize in building full-stack applications with <span className="text-primary font-mono">MongoDB, Express.js, React, and Node.js</span>. 
+              With a strong foundation in <span className="text-secondary font-mono">SQL (MySQL, PostgreSQL)</span> and <span className="text-primary font-mono">NoSQL</span> databases, I engineer scalable backends and dynamic user interfaces that deliver seamless digital experiences.
             </p>
             <div className="grid grid-cols-2 gap-4">
                 {skills.map((skill, index) => (
-                    <div key={index} className="p-4 border border-white/10 rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
-                        <div className="text-cyan-400 mb-2">{skill.icon}</div>
-                        <h4 className="font-bold font-display text-white">{skill.title}</h4>
-                        <p className="text-sm text-gray-500">{skill.desc}</p>
+                    <div key={index} className="p-4 border border-border-main rounded-lg bg-bg-card hover:bg-white/5 transition-colors">
+                        <div className="text-primary mb-2">{skill.icon}</div>
+                        <h4 className="font-bold font-display text-text-primary">{skill.title}</h4>
+                        <p className="text-sm text-text-secondary">{skill.desc}</p>
                     </div>
                 ))}
             </div>
@@ -48,9 +48,9 @@ const About = () => {
             className="w-full md:w-1/2 relative"
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur-[80px] opacity-30 animate-pulse"></div>
-                <div className="relative z-10 w-full h-full glass rounded-2xl border border-white/10 p-2 overflow-hidden flex items-center justify-center">
-                    <div className="text-9xl font-black text-white/5 select-none absolute">DEV</div>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full blur-[80px] animate-pulse"></div>
+                <div className="relative z-10 w-full h-full glass rounded-2xl border border-border-main p-2 overflow-hidden flex items-center justify-center">
+                    <div className="text-9xl font-black opacity-5 select-none absolute text-text-primary">DEV</div>
                     <img 
                         src={profileImg} 
                         alt="Profile" 
