@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 const projects = [
   {
-    title: 'Advanced System Tool',
-    description: 'High-performance system optimization tool built with C++ for maximum efficiency and low-level resource management.',
-    tags: ['C++', 'Systems Programming', 'Optimization'],
+    title: 'MERN E-Commerce',
+    description: 'A full-featured e-commerce platform with secure authentication, product management, and real-time payment integration.',
+    tags: ['MongoDB', 'Express', 'React', 'Node.js'],
     color: 'from-cyan-400 to-blue-500' 
   },
   {
@@ -30,7 +30,7 @@ const Projects = () => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-6xl font-display font-black mb-20 text-center tracking-tighter"
+          className="text-4xl md:text-5xl font-display font-black mb-16 text-center tracking-tighter"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
             FEATURED PROJECTS

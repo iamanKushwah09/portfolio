@@ -20,7 +20,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-2xl md:text-3xl font-mono font-bold mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600"
+          className="text-xl md:text-2xl font-mono font-bold mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600"
         >
           Hi, I'm Aman Kushwah
         </motion.h2>
@@ -29,7 +29,7 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-6xl md:text-9xl font-black font-display mb-8 tracking-tighter leading-none"
+          className="text-5xl md:text-7xl font-black font-display mb-8 tracking-tighter leading-none"
         >
           I BUILD <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600" style={{ backgroundImage: 'linear-gradient(to right, var(--primary), var(--secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
@@ -43,7 +43,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-gray-400 max-w-lg mx-auto mb-12 text-xl font-light leading-relaxed tracking-wide"
         >
-          Full Stack Developer specializing in high-performance web applications and immersive user experiences.
+          MERN Stack Developer specializing in building scalable backend systems, robust APIs, and immersive, high-performance web applications.
         </motion.p>
         
         <motion.div 

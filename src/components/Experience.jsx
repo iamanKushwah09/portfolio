@@ -4,11 +4,11 @@ import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
   {
-    role: 'Frontend Engineer Intern',
+    role: 'MERN Stack Developer Intern',
     company: 'Software Development',
     date: 'Aug 2025 - Present',
-    description: 'Developing high-performance user interfaces using React and modern web technologies. Collaborating with senior developers to implement futuristic designs and optimize web application speed.',
-    tech: ['React', 'Tailwind', 'Framer Motion']
+    description: 'Specializing in end-to-end web development using the MERN stack. Building scalable REST APIs with Node.js & Express, managing MongoDB databases, and creating responsive React frontends with modern UI frameworks.',
+    tech: ['MongoDB', 'Express', 'React', 'Node.js']
   }
 ];
 
@@ -20,7 +20,7 @@ const Experience = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-6xl font-display font-black mb-20 text-center tracking-tighter"
+          className="text-4xl md:text-5xl font-display font-black mb-16 text-center tracking-tighter"
         >
           WORK <span className="text-cyan-400">EXPERIENCE</span>
         </motion.h2>
