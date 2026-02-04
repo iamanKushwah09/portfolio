@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Cpu, Globe, Rocket, Terminal, Server, Database, Layers } from 'lucide-react';
 
+import profileImg from '../assets/aman.jpeg';
+
 const About = () => {
     const skills = [
         { icon: <Layers size={24} />, title: "Frontend", desc: "React, Next.js, Redux, Tailwind" },
@@ -50,7 +52,7 @@ const About = () => {
                 <div className="relative z-10 w-full h-full glass rounded-2xl border border-white/10 p-2 overflow-hidden flex items-center justify-center">
                     <div className="text-9xl font-black text-white/5 select-none absolute">DEV</div>
                     <img 
-                        src="src/assets/aman.jpeg" 
+                        src={profileImg} 
                         alt="Profile" 
                         className="w-full h-full object-cover rounded-xl opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
                     />
