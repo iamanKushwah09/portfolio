@@ -1,13 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase } from 'lucide-react';
+import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
   {
     role: 'Frontend Engineer Intern',
-    company: 'Kloudon Technologies Pvt. Ltd.',
+    company: 'Software Development',
     date: 'Aug 2025 - Present',
     description: 'Developing high-performance user interfaces using React and modern web technologies. Collaborating with senior developers to implement futuristic designs and optimize web application speed.',
+    tech: ['React', 'Tailwind', 'Framer Motion']
   }
 ];
 
@@ -24,31 +25,51 @@ const Experience = () => {
           WORK <span className="text-cyan-400">EXPERIENCE</span>
         </motion.h2>
 
-        <div className="max-w-3xl mx-auto relative">
-          {/* Vertical Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-cyan-400/0 via-cyan-400/50 to-cyan-400/0 transform -translate-x-1/2 hidden md:block"></div>
-
+        <div className="max-w-4xl mx-auto">
           {experiences.map((exp, index) => (
             <motion.div 
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="relative mb-12"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="relative pl-8 md:pl-0"
             >
-              {/* Timeline Dot */}
-              <div className="absolute left-0 md:left-1/2 top-0 w-4 h-4 bg-cyan-400 rounded-full blur-[2px] transform -translate-x-[5px] md:-translate-x-2 hidden md:block shadow-[0_0_10px_var(--primary)]"></div>
+              {/* Connecting Line (Left aligned for mobile, alternating or custom for desktop - enabling simple left list for now for better single-item look) */}
+              <div className="hidden md:block absolute left-[20px] top-0 bottom-0 w-[1px] bg-gradient-to-b from-cyan-400 to-purple-600 opacity-30"></div>
+              
+              <div className="md:ml-12 relative group">
+                {/* Timeline Dot */}
+                <div className="hidden md:block absolute -left-[35px] top-6 w-4 h-4 bg-black border-2 border-cyan-400 rounded-full group-hover:scale-125 transition-transform shadow-[0_0_10px_var(--primary)] z-10"></div>
 
-              <div className="md:w-1/2 pr-0 md:pr-12 md:text-right md:ml-0 ml-8">
-                <div className="p-6 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-400/50 transition-colors group">
-                    <div className="flex items-center gap-3 mb-2 md:justify-end">
-                        <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">{exp.role}</h3>
-                        <Briefcase size={18} className="text-cyan-400 md:hidden" />
+                <div className="p-1 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-purple-600/20">
+                  <div className="bg-black/90 backdrop-blur-xl p-6 rounded-xl border border-white/10 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-4 opacity-10">
+                      <Briefcase size={100} />
                     </div>
-                    <div className="text-sm text-purple-400 font-mono mb-4">{exp.company} | {exp.date}</div>
-                    <p className="text-gray-400 leading-relaxed text-sm">
+                    
+                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                       <div>
+                          <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">{exp.role}</h3>
+                          <p className="text-lg text-gray-300">{exp.company}</p>
+                       </div>
+                       <div className="flex items-center gap-2 text-sm font-mono text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full border border-cyan-400/20 w-fit">
+                          <Calendar size={14} />
+                          {exp.date}
+                       </div>
+                    </div>
+
+                    <p className="text-gray-400 leading-relaxed mb-6 max-w-2xl">
                         {exp.description}
                     </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {exp.tech.map((tech, i) => (
+                        <span key={i} className="px-3 py-1 text-xs font-bold text-black bg-gradient-to-r from-cyan-400 to-blue-500 rounded-sm">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
